@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--primary-500);
+  background-color: var(--info-Dark);
   margin: 0 0 0 0;
 }
 
@@ -27,8 +27,8 @@
 }
 
 .footerLogoImg {
-  width: 180px;
-  height: 45px;
+  width: 140px;
+  height: 60px;
   position: relative;
 }
 
@@ -78,7 +78,9 @@ ul.footerNav li a {
 ul.footerNav li a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
-
+ul.footerNav li ul {
+  margin: 5px 0 0 0;
+}
 ul.footerNav li ul li a {
   font-weight: normal;
 }

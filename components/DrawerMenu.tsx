@@ -4,8 +4,6 @@ import styles from '@styles/components/Header.module.css';
 import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
 import { IoIosMenu } from 'react-icons/io';
-import { useRouter } from 'next/router';
-import { Link as Scroll } from 'react-scroll';
 import Image from 'next/image';
 import Button from '@components/Button';
 
@@ -15,17 +13,15 @@ const DrawerMenu = () => {
     setIsOpen((prevState) => !prevState);
   };
 
-  const router = useRouter();
-
   const navItem = [
-    { url: 'case', name: '導入事例' },
-    { url: 'service', name: 'サービス' },
-    { url: 'scene', name: 'シーン' },
-    { url: 'design', name: 'デザイン' },
-    { url: 'features', name: '機能' },
-    { url: 'news', name: '新着情報' },
-    { url: 'handbook', name: 'ハンドブック' },
-    { url: 'faq', name: 'FAQ' },
+    { url: 'company/about', name: 'LTDについて' },
+    { url: 'service/individual', name: '個人のお客様' },
+    { url: 'service/corporation', name: '法人のお客様' },
+    { url: 'service/inheritance', name: '相続のご相談' },
+
+    { url: 'service/faq', name: 'よくあるご質問' },
+    { url: 'news/page/1', name: '新着情報' },
+    { url: 'career', name: '採用情報' },
   ];
 
   return (
@@ -36,20 +32,18 @@ const DrawerMenu = () => {
       <Drawer open={isOpen} onClose={toggleDrawer} direction='right'>
         <div className={styles.drawerInner}>
           <div className={styles.drawerInnerContent}>
-            <div className={styles.logo}>
-              <Link href='/'>
-                <a>
-                  <div className={styles.logoImg}>
-                    <Image
-                      src='/images/rura_logo_blue.svg'
-                      alt='遠隔接客サービスRURA'
-                      layout={'fill'}
-                      objectFit={'contain'}
-                    />
-                  </div>
-                </a>
-              </Link>
-            </div>
+            <Link href='/'>
+              <a className={styles.drawerlogo}>
+                <div className={styles.drawerlogoImg}>
+                  <Image
+                    src='/images/ltd_logo.svg'
+                    alt='株式会社LTD'
+                    layout={'fill'}
+                    objectFit={'contain'}
+                  />
+                </div>
+              </a>
+            </Link>
 
             <ul>
               <li>
@@ -58,32 +52,13 @@ const DrawerMenu = () => {
                 </Link>
               </li>
 
-              {router.pathname == '/' ? (
-                <>
-                  {navItem.map((items) => (
-                    <li key={items.url}>
-                      <Scroll
-                        to={items.url}
-                        smooth={true}
-                        duration={600}
-                        onClick={toggleDrawer}
-                      >
-                        {items.name}
-                      </Scroll>
-                    </li>
-                  ))}
-                </>
-              ) : (
-                <>
-                  {navItem.map((items) => (
-                    <li key={items.url}>
-                      <Link href='/' as={`/#${items.url}`}>
-                        <a onClick={toggleDrawer}>{items.name}</a>
-                      </Link>
-                    </li>
-                  ))}
-                </>
-              )}
+              {navItem.map((items) => (
+                <li key={items.url}>
+                  <Link href={`/${items.url}`}>
+                    <a onClick={toggleDrawer}>{items.name}</a>
+                  </Link>
+                </li>
+              ))}
             </ul>
 
             <div className={styles.drawerInnerBtn}>
@@ -92,36 +67,14 @@ const DrawerMenu = () => {
                   bgColor='primary'
                   size='normal'
                   types='link'
-                  href='/download'
-                  id='drawerD'
-                >
-                  資料ダウンロード
-                </Button>
-              </div>
-              <div onClick={toggleDrawer}>
-                <Button
-                  bgColor='secondary'
-                  size='normal'
-                  types='link'
                   href='/contact'
                   id='drawerC'
+                  icon='contact'
                 >
                   お問い合わせ
                 </Button>
               </div>
             </div>
-            <ul className={styles.simple}>
-              <li>
-                <Link href={'/company'}>
-                  <a onClick={toggleDrawer}>運営会社</a>
-                </Link>
-              </li>
-              <li>
-                <Link href={'/company/privacy-policy'}>
-                  <a onClick={toggleDrawer}>プライバシーポリシー</a>
-                </Link>
-              </li>
-            </ul>
           </div>
         </div>
       </Drawer>

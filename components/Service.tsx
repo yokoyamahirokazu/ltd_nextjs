@@ -1,109 +1,129 @@
 import styles from '@styles/components/Components.module.css';
 import Image from 'next/image';
 import { ReactElement } from 'react';
+import Button from '@components/Button';
 
 export const Service: React.FC = (): ReactElement => {
   return (
-    <section className={styles.slantBg} id='service'>
-      <div className={styles.slantBg_inner}>
-        <div className={styles.headline_box_center}>
-          <h2 className={styles.headline}>
-            遠隔接客サービス
-            <span>
-              RURAは店頭スタッフと変わらない接客サービスの提供を目指しています。
-            </span>
-          </h2>
-        </div>
-        <div className={styles.contentBox}>
-          <div className={`serviceWrap ${styles.contentFlex}`}>
-            <div
-              className={`fadein ${styles.contentFlexTwo} ${styles.boxShadowA} ${styles.boxRound}`}
-            >
-              <div className={styles.boxRound_inner}>
-                <div className={styles.imageBoxA}>
+    <>
+      <section>
+        <div className={styles.section_inner}>
+          <div className={styles.flexBox}>
+            <div className={styles.flexBoxRight}>
+              <div className={styles.serviceImg}>
+                <div className={styles.serviceImgInner}>
                   <Image
-                    src='/images/rura_service_1.png'
-                    alt='画面を見せながらの接客'
+                    src='/images/service_a.png'
+                    alt='個人のお客様'
                     layout={'fill'}
-                    objectFit={'cover'}
+                    objectFit={'contain'}
                   />
-                </div>
-                <div className={styles.txtBoxA}>
-                  <h3 className={styles.headlineMed}>画面を見せながらの接客</h3>
-                  <p>
-                    タブレットを見せながら接客しているかのように、画像や動画を出したり切り替えたりしながら案内できます。
-                  </p>
                 </div>
               </div>
             </div>
-            <div
-              className={`fadein ${styles.contentFlexTwo} ${styles.boxShadowA} ${styles.boxRound}`}
-            >
-              <div className={styles.boxRound_inner}>
-                <div className={styles.imageBoxA}>
-                  <Image
-                    src='/images/rura_service_2.png'
-                    alt='声かけ・呼び出し'
-                    layout={'fill'}
-                    objectFit={'cover'}
-                  />
-                </div>
-                <div className={styles.txtBoxA}>
-                  <h3 className={styles.headlineMed}>声かけ・呼び出し</h3>
-                  <p>
-                    店頭同様にスタッフ側から声かけしたり、お客様側から呼び鈴で呼び出す形式のどちらもできます。
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              className={`fadein ${styles.contentFlexTwo} ${styles.boxShadowA} ${styles.boxRound}`}
-            >
-              <div className={styles.boxRound_inner}>
-                <div className={styles.imageBoxA}>
-                  <Image
-                    src='/images/rura_service_3.png'
-                    alt='いつものスタッフが画面から'
-                    layout={'fill'}
-                    objectFit={'cover'}
-                  />
-                </div>
-                <div className={styles.txtBoxA}>
-                  <h3 className={styles.headlineMed}>
-                    いつものスタッフが画面から
-                  </h3>
-                  <p>
-                    店頭に立っていたスタッフが画面越しに多拠点接客できるようになります。
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              className={`fadein ${styles.contentFlexTwo} ${styles.boxShadowA} ${styles.boxRound}`}
-            >
-              <div className={styles.boxRound_inner}>
-                <div className={styles.imageBoxA}>
-                  <Image
-                    src='/images/rura_service_4.png'
-                    alt='顔出し、アバター、キャラクター'
-                    layout={'fill'}
-                    objectFit={'cover'}
-                  />
-                </div>
-                <div className={styles.txtBoxA}>
-                  <h3 className={styles.headlineMed}>
-                    顔出し、アバター、キャラクター
-                  </h3>
-                  <p>
-                    店頭同様の顔出し接客はもちろん、画面越しならではのアバターやキャラクターも選べます。
-                  </p>
+            <div className={styles.flexBoxLeft}>
+              <div className={styles.headline_box_center}>
+                <h2 className={styles.headline}>
+                  個人のお客様
+                  <span>Individual Customer</span>
+                </h2>
+                <p>安心で豊かな未来のため、起こりうるリスクに備えます。</p>
+                <div className={styles.mgTop}>
+                  <Button
+                    bgColor='primary'
+                    size='normal'
+                    types='link'
+                    href='/service/individual'
+                  >
+                    詳しく見る
+                  </Button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section className={styles.slantBg}>
+        <div className={styles.section_inner}>
+          <div className={styles.flexBoxChange}>
+            <div className={styles.flexBox}>
+              <div className={styles.flexBoxRight}>
+                <div className={styles.serviceImg}>
+                  <div className={styles.serviceImgInner}>
+                    <Image
+                      src='/images/service_b.png'
+                      alt='法人のお客様'
+                      layout={'fill'}
+                      objectFit={'contain'}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className={styles.flexBoxLeft}>
+                <div className={styles.headline_box_center}>
+                  <h2 className={styles.headline}>
+                    法人のお客様
+                    <span>Corporate Customer</span>
+                  </h2>
+                  <p>
+                    あらゆるリスクマネジメントのお手伝いをすることで、御社の発展繁栄に貢献します。
+                  </p>
+                  <div className={styles.mgTop}>
+                    <Button
+                      bgColor='primary'
+                      size='normal'
+                      types='link'
+                      href='/service/corporation'
+                    >
+                      詳しく見る
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className={styles.section_inner}>
+          <div className={styles.flexBox}>
+            <div className={styles.flexBoxRight}>
+              <div className={styles.serviceImg}>
+                <div className={styles.serviceImgInner}>
+                  <Image
+                    src='/images/service_c.png'
+                    alt='相続のご相談'
+                    layout={'fill'}
+                    objectFit={'contain'}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className={styles.flexBoxLeft}>
+              <div className={styles.headline_box_center}>
+                <h2 className={styles.headline}>
+                  相続のご相談
+                  <span>Inheritance</span>
+                </h2>
+                <p>
+                  財産の全容を把握し、無駄のないスムーズな相続を実現します。
+                </p>
+                <div className={styles.mgTop}>
+                  <Button
+                    bgColor='primary'
+                    size='normal'
+                    types='link'
+                    href='/service/inheritance'
+                  >
+                    詳しく見る
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

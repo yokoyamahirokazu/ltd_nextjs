@@ -24,8 +24,8 @@
   transform: translate(0, -50%);
 }
 .logoImg {
-  width: 160px;
-  height: 40px;
+  width: 100px;
+  height: 45px;
   position: relative;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -66,15 +66,15 @@ nav.header_nav ul {
 }
 
 nav.header_nav ul li {
-  margin: 0 0 0 20px;
+  margin: 0 0 0 30px;
 }
 nav.header_nav ul li a {
-  font-size: 1.4rem;
-  color: var(--primary-500);
+  font-size: 1.5rem;
+  color: var(--text-color);
   display: block;
   position: relative;
   padding: 10px 0;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 nav.header_nav ul li a::before {
@@ -83,7 +83,7 @@ nav.header_nav ul li a::before {
   left: 0;
   width: 0;
   height: 1px;
-  background-color: var(--primary-500);
+  background-color: var(--primary-Main);
   content: ' ';
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -96,7 +96,7 @@ nav.header_nav ul li a:hover::before {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: var(--primary-500);
+  background-color: var(--primary-Main);
   content: ' ';
 }
 
@@ -110,8 +110,19 @@ nav.header_nav ul li a:hover::before {
 }
 
 .headerFixed .logoImg {
-  width: 120px;
-  height: 30px;
+  width: 80px;
+  height: 36px;
+}
+
+a.drawerlogo {
+  margin: 0 0 20px 0;
+  display: block;
+}
+
+.drawerlogoImg {
+  width: 80px;
+  height: 36px;
+  position: relative;
 }
 
 @media screen and (max-width: 1160px) {
@@ -152,10 +163,7 @@ nav.header_nav ul li a:hover::before {
   }
   .drawerInnerContent ul li {
     margin: 0;
-    padding: 10px 0;
-    border-bottom: solid 1px var(--border-light);
-  }
-  .drawerInnerContent ul li:first-child {
+    padding: 15px 0;
     border-top: solid 1px var(--border-light);
   }
 
@@ -186,7 +194,7 @@ nav.header_nav ul li a:hover::before {
   }
   .drawerInnerContent .logoImg {
     width: 140px;
-    height: 35px;
+    height: 63px;
   }
   .drawerInnerBtn {
     margin: 10px 0 20px;
@@ -203,14 +211,16 @@ nav.header_nav ul li a:hover::before {
     height: 50px;
     z-index: 99999;
   }
-
+  .logo a {
+    left: 10px;
+  }
   .logoImg {
-    width: 120px;
+    width: 70px;
     height: 30px;
   }
 
   .headerFixed .logoImg {
-    width: 120px;
+    width: 70px;
     height: 30px;
   }
 
@@ -220,4 +230,19 @@ nav.header_nav ul li a:hover::before {
   .headerRight {
     display: none;
   }
+}
+
+.index .header {
+  background-color: var(--secondary-Main);
+}
+
+.index nav.header_nav ul li a {
+  color: #fff;
+}
+
+.index nav.header_nav ul li a::before {
+  background-color: #fff;
+}
+.index .headerFixed {
+  background-color: var(--secondary-Dark);
 }

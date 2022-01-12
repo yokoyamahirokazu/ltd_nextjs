@@ -100,41 +100,6 @@ const Detail: NextPage<DetailProps> = (props) => {
             dangerouslySetInnerHTML={{ __html: props.body }}
           ></div>
 
-          <div className={styles.postContactBox}>
-            <div className={styles.postContactBoxLogo}>
-              <div className={styles.postContactBoxLogoImg}>
-                <Image
-                  src='/images/rura_logo_blue.svg'
-                  alt={props.blog.title}
-                  layout={'fill'}
-                  objectFit={'contain'}
-                />
-              </div>
-              <p>資料ダウンロード・お問い合わせはこちら</p>
-            </div>
-            <div className={styles.contactSectionLogoBtn}>
-              <Button
-                bgColor='primary'
-                size='large'
-                types='link'
-                href='/download/'
-                icon='download'
-                id={`${props.blog.id}D`}
-              >
-                資料ダウンロード
-              </Button>
-              <Button
-                bgColor='secondary'
-                size='large'
-                types='link'
-                href='/contact'
-                icon='contact'
-                id={`${props.blog.id}C`}
-              >
-                お問い合わせ
-              </Button>
-            </div>
-          </div>
           <Tags tags={props.blog.tag} />
           <Share
             id={props.blog.id}

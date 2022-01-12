@@ -5,58 +5,25 @@
   max-width: 1080px;
   padding: 0 4vw;
 }
-.headline_box_nomargin {
-  margin: 0 auto;
-  max-width: 1080px;
-  padding: 0 4vw;
-}
-
-.headline_box_center {
-  margin: 0 auto 4vw;
-  text-align: center;
-  padding: 0 4vw;
-  max-width: 1080px;
-}
-.headline_box_center_nomargin {
-  margin: 0 auto 0;
-  text-align: center;
-  padding: 0 4vw;
-  max-width: 1080px;
-}
 
 .headline {
   font-size: 4rem;
-  font-weight: bold;
-  color: var(--primary-500);
+  font-weight: normal;
   line-height: 1.3;
 }
 
 .headline span {
   font-size: 1.5rem;
-  font-weight: bold;
-  display: inline-block;
-  margin: 0 0 0 1.6rem;
-}
-
-.headlineMed {
-  font-size: 2rem;
-  color: var(--primary-500);
-  font-weight: bold;
-  margin: 0 0 15px 0;
-  line-height: 1.5;
-}
-
-.headlineMed span {
   display: block;
-  font-size: 1.4rem;
-  margin: 5px 0 0 0;
+  margin: 1.6rem 0 0 0;
+  color: var(--text-secondary);
 }
-.headlineMin {
-  font-size: 1.6rem;
-  color: var(--primary-500);
-  font-weight: bold;
-  margin: 0 0 0 0;
-  line-height: 1.5;
+
+.headline_box_center {
+  text-align: center;
+}
+.headline_box_center .headline {
+  margin: 0 0 40px 0;
 }
 
 .headline_box_center .headline span {
@@ -64,34 +31,17 @@
   margin: 1.6rem 0 0 0;
 }
 
+.headline_box_center p {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 .sectionFlexLeft .headline span {
   display: block;
   margin: 1.6rem 0 0 0;
 }
 
-.headlineMinBlk {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0 0 0 0;
-  line-height: 1.5;
-}
-.headlineMinBlk span {
-  font-size: 1.2rem;
-  display: block;
-  margin: 5px 0 0 0;
-}
-.headlineBigWh {
-  font-size: 3.6rem;
-  display: block;
-  color: #fff;
-  font-weight: bold;
-  letter-spacing: 0.5rem;
-}
-@media screen and (max-width: 960px) {
-  .headlineBigWh {
-    font-size: 3vw;
-  }
-}
 @media screen and (max-width: 767px) {
   .headline_box {
     margin: 0 auto 40px;
@@ -101,24 +51,9 @@
     margin: 0 auto 40px;
   }
 
-  .headline_box_nomargin {
-    padding: 0 4vw;
-    margin: 0 0 40px;
-    text-align: center;
-  }
-
-  .headline_box_center_nomargin {
-    margin: 0 0 40px;
-    padding: 0 4vw;
-  }
-
   .headline {
     font-size: 3rem;
     text-align: center;
-  }
-
-  .headlineBigWh {
-    font-size: 3rem;
   }
 
   .headline_box_center .headline span {
@@ -127,10 +62,6 @@
 
   .sectionFlexLeft .headline span {
     margin: 10px 0 0 0;
-  }
-
-  .headlineMed {
-    font-size: 1.8rem;
   }
 }
 
@@ -146,7 +77,7 @@
   }
 
   .headline {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 
   .headline span {
@@ -154,10 +85,524 @@
     display: block;
     margin: 10px 0 0;
   }
+}
 
-  .headlineBigWh {
+/* page */
+
+.pageContent {
+  padding: 6vw 0;
+  position: relative;
+}
+
+.pageContent::before {
+  content: ' ';
+  position: absolute;
+  top: 14vw;
+  left: 0;
+  right: 0;
+  height: 600px;
+  background-color: var(--secondary-Light);
+  transform: skewY(-8deg);
+  z-index: -1;
+}
+
+.pageContentBgLight::before {
+  background-color: var(--background);
+}
+
+.pageContent h2 {
+  font-size: 2.8rem;
+  margin: 0 0 30px 0;
+  line-height: 1.5;
+}
+.pageContent h2 span {
+  font-size: 1.8rem;
+  margin: 0 0 30px 0;
+  display: block;
+}
+
+.pageContent h3 {
+  font-size: 1.8rem;
+  margin: 40px 0 10px 0;
+  line-height: 1.5;
+}
+
+.pageContent table {
+  border-collapse: collapse;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  width: 100%;
+}
+
+.pageContent table tr {
+  border-bottom: solid 1px var(--border-light);
+}
+.pageContent table tr:first-child {
+  border-top: solid 1px var(--border-light);
+}
+.pageContent table th {
+  padding: 20px 0;
+  font-weight: bold;
+  text-align: left;
+}
+.pageContent table td {
+  padding: 20px 0 20px 20px;
+  font-weight: normal;
+  white-space: pre-wrap;
+}
+
+.paddingBox {
+  padding: 0;
+}
+
+@media screen and (max-width: 640px) {
+  .pageContent::before {
+    top: 120px;
+  }
+
+  .pageContent table th {
+    padding: 20px 0 10px;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+  }
+  .pageContent table td {
+    padding: 0 0 20px;
+    font-weight: normal;
+    white-space: pre-wrap;
+    display: block;
+  }
+
+  .pageContent h2 {
     font-size: 2rem;
-    letter-spacing: 0.07rem;
+    text-align: center;
+  }
+  .pageContent h2 span {
+    font-size: 1.5rem;
+    margin: 0 0 30px 0;
+    display: block;
+  }
+
+  .paddingBox {
+    padding: 0 20px;
+  }
+}
+/* about */
+.vmv {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 0 80px 0;
+  padding: 0 4vw;
+}
+
+.vmvHeadline {
+  font-size: 4rem;
+  margin: 0 4vw 0 0;
+  width: 16rem;
+}
+.vmvCopy {
+  width: calc(100% - 4vw - 16rem);
+  font-size: 1.8rem;
+}
+
+.greeting {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 4vw;
+  background-color: var(--background);
+}
+
+.greetingCopy {
+  width: 60%;
+}
+
+.greetingImg {
+  width: calc(40% - 4vw);
+  margin: 0 0 0 4vw;
+  text-align: center;
+}
+.greetingImg p {
+  margin: 20px 0 0 0;
+}
+
+@media screen and (max-width: 640px) {
+  .vmv {
+    display: block;
+    padding: 20px;
+  }
+
+  .vmv:last-child {
+    margin: 0;
+  }
+
+  .vmvHeadline {
+    font-size: 3rem;
+    margin: 0 0 4vw 0;
+    width: auto;
+  }
+  .vmvCopy {
+    width: auto;
+    font-size: 1.6rem;
+  }
+
+  .greeting {
+    display: block;
+    padding: 40px 20px;
+  }
+
+  .greetingCopy {
+    width: 100%;
+  }
+
+  .greetingImg {
+    width: 40vw;
+    margin: 40px auto 0;
+    text-align: center;
+  }
+
+  .greetingImg p {
+    margin: 20px 0 0 0;
+  }
+}
+
+/* div */
+
+.mgTop {
+  margin: 40px 0 0 0;
+}
+
+.flexBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 4vw;
+}
+
+.flexBoxLeft {
+  margin: 0;
+  width: 50%;
+  order: 1;
+}
+.flexBoxRight {
+  margin: 0;
+  width: 50%;
+  order: 2;
+}
+
+.flexBoxChange .flexBoxRight {
+  order: 1;
+}
+.flexBoxChange .flexBoxLeft {
+  order: 2;
+}
+
+@media screen and (max-width: 480px) {
+  .flexBox {
+    display: block;
+  }
+
+  .flexBoxLeft {
+    margin: 0;
+    width: 100%;
+  }
+  .flexBoxRight {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* service */
+
+.serviceImg {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+.serviceImg::before {
+  padding: 100% 0 0 0;
+  display: block;
+  content: ' ';
+}
+.serviceImgInner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.servicePageTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4vw;
+}
+
+.servicePageTitleLeft {
+  width: 40%;
+  order: 1;
+}
+.servicePageTitleRight {
+  width: calc(60% - 4vw);
+  margin: 0 0 0 4vw;
+  order: 2;
+}
+
+.width540Box {
+  margin: 0 auto;
+  max-width: 540px;
+  margin: 0 auto;
+  text-align: center;
+}
+.width540Box p {
+  text-align: left;
+}
+
+.recomendBox {
+  position: relative;
+  background-color: var(--background);
+  padding: 40px 60px;
+  display: block;
+}
+
+.recomendBox p {
+  font-size: 1.8rem;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.recomendBox p svg {
+  color: var(--primary-Main);
+  margin: 0 10px 0 0;
+  font-size: 2rem;
+}
+
+.recomendBoxTitle {
+  width: 200px;
+  height: 200px;
+  background-color: var(--secondary-Main);
+  border-radius: 50%;
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recomendBoxTitle p {
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.stepsContent .flexBox {
+  align-items: flex-start;
+}
+.stepsContent .flexBoxLeft {
+  padding: 0 6vw 0 0;
+}
+
+.steps {
+  counter-reset: step-counter;
+  position: relative;
+  padding-left: 6rem;
+}
+
+/* 縦棒 */
+.steps:before {
+  content: '';
+  /* 幅と色 */
+  background-color: var(--primary-Main);
+  width: 1px;
+  /* 位置 */
+  position: absolute;
+  top: 2.5rem; /* 円のwidthの半分 */
+  left: 2.5rem; /* 円のwidthの半分 */
+  height: calc(100% - 0.7rem); /* 100% - top */
+  /* 連番より後ろに表示するため */
+  z-index: 0;
+}
+
+.steps > h3 {
+  /* 連番カウンターを+1する */
+  counter-increment: step-counter;
+  /* 連番カウンターを垂直方向に中央揃えで表示する */
+  display: flex;
+  align-items: center;
+  font-size: 2.8rem;
+  margin: 0 0 10px 0;
+}
+
+/* ①②③など連番 */
+.steps > h3:before {
+  /* 連番カウンターの値を表示する */
+  content: counter(step-counter);
+  /* フォントと色 */
+  background: var(--primary-Main);
+  color: white;
+  font-size: 2rem;
+  font-weight: normal;
+  /* 文字を中央に表示する */
+  line-height: 1.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 円で表示する */
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  /* .stepsでmargin-left +2rem したぶん左に戻す */
+  position: absolute;
+  left: 0;
+  /* 縦棒より手前に表示するため */
+  z-index: 1;
+  border: solid #fff 4px;
+  box-sizing: border-box;
+}
+
+.steps p {
+  margin: 0 0 60px;
+}
+
+.numberContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  counter-reset: step-counter;
+  padding: 0 4vw;
+}
+.numberContentBox {
+  width: calc(50% - 30px);
+  margin: 0 0 60px 60px;
+  position: relative;
+  counter-increment: step-counter;
+  padding: 0 0 0 8rem;
+  box-sizing: border-box;
+}
+.numberContentBox:nth-child(odd) {
+  margin: 0 0 60px 0;
+}
+
+.numberContentBox > h2 {
+  font-size: 2rem;
+  margin: 0 0 20px 0;
+}
+
+/* ①②③など連番 */
+.numberContentBox:before {
+  /* 連番カウンターの値を表示する */
+  content: counter(step-counter);
+  /* フォントと色 */
+  color: var(--primary-Main);
+  font-size: 6rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.recomendBoxInner {
+  padding: 0 0 0 0;
+}
+
+@media screen and (max-width: 640px) {
+  .servicePageTitle {
+    display: block;
+    padding: 0 20px;
+  }
+
+  .servicePageTitleLeft {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .servicePageTitleRight {
+    width: 100%;
+    margin: 0 0 30px;
+  }
+
+  .recomendBoxInner {
+    padding: 180px 0 0 0;
+  }
+
+  .recomendBox {
+    position: relative;
+    padding: 40px 20px;
+    display: block;
+    margin: 0 0 0;
+  }
+
+  .recomendBox p {
+    font-size: 1.6rem;
+    margin: 20px 0;
+  }
+
+  .recomendBoxTitle {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    right: auto;
+    left: 50%;
+    top: calc(-50% + 30px);
+    transform: translate(-50%, 0);
+  }
+
+  .recomendBoxTitle p {
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+  }
+
+  .steps {
+    margin: 60px 0 0 0;
+  }
+
+  .steps > h3 {
+    /* 連番カウンターを+1する */
+    counter-increment: step-counter;
+    /* 連番カウンターを垂直方向に中央揃えで表示する */
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin: 0 0 10px 0;
+  }
+
+  .numberContent {
+    display: block;
+    padding: 0 20px;
+  }
+  .numberContentBox {
+    width: 100%;
+    margin: 0 0 80px 0;
+    position: relative;
+    counter-increment: step-counter;
+    padding: 0 0 0 8rem;
+    box-sizing: border-box;
+  }
+  .numberContentBox:nth-child(odd) {
+    margin: 0 0 80px 0;
+  }
+
+  .numberContentBox > h2 {
+    font-size: 2rem;
+    margin: 0 0 20px 0;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .serviceImg {
+    width: 80%;
+    position: relative;
+    margin: 0 auto 40px;
   }
 }
 
@@ -175,11 +620,11 @@
   content: ' ';
   position: absolute;
   top: 8vw;
-  bottom: 10vw;
+  bottom: 4vw;
   left: 0;
   right: 0;
   background-color: var(--bg-light);
-  transform: skewY(-5deg);
+  transform: skewY(-8deg);
   z-index: -1;
 }
 
@@ -193,6 +638,13 @@
   padding: 6vw 0;
   box-sizing: content-box;
   margin: 0 auto;
+  max-width: 1080px;
+}
+.section_inner_padding {
+  padding: 6vw 20px;
+  box-sizing: content-box;
+  margin: 0 auto;
+  max-width: 1080px;
 }
 
 .case_inner {
@@ -829,42 +1281,70 @@
   margin: 0;
 }
 
-.faqContent h3 {
-  margin: 0 0 20px 0;
+ul.faqContent li {
+  border-top: solid 1px var(--info-Light);
 }
 
+ul.faqContent li:first-child {
+  border: none;
+}
+
+ul.faqContent h3 {
+  margin: 0 0 0 0;
+  padding: 10px 10px;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--info-Dark);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+ul.faqContent h3 svg {
+  margin: 0 10px 0 0;
+  font-size: 2rem;
+}
+
+ul.faqContent p {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+@media screen and (max-width: 480px) {
+  ul.faqContent h3 {
+    font-size: 1.4rem;
+    padding: 10px 30px 10px 10px;
+  }
+  ul.faqContent p {
+    font-size: 1.4rem;
+  }
+}
 /* contactSection */
 
 .contactSection {
   position: relative;
   z-index: 1;
   overflow: hidden;
-}
-
-.contactSectionBg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -2;
-}
-.contactSectionBg::after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background-color: var(--bg-overlay);
-  mix-blend-mode: multiply;
-  content: ' ';
+  padding: 4vw;
 }
 
 .contactSection_inner {
   max-width: 1080px;
-  box-sizing: content-box;
-  padding: 0 4vw;
+  box-sizing: border-box;
+  padding: 4vw;
   margin: 0 auto;
+  background-color: var(--secondary-Light);
+}
+
+.contactSection h2 {
+  font-size: 3rem;
 }
 
 .contactSectionFlex {
@@ -873,156 +1353,86 @@
   justify-content: center;
 }
 
-.contactSectionImg {
-  width: 300px;
-  height: 400px;
-  position: relative;
-  order: 1;
+.contactSectionLink {
+  background-color: #fff;
+  width: calc(33.3333% - 20px);
+  margin: 0 0 0 30px;
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 4px;
+  color: var(--info-Main);
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  display: block;
 }
 
-.contactSectionImg::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  content: ' ';
-  box-shadow: inset 0px 4px 30px rgba(0, 35, 51, 0.2);
-  z-index: 3;
+.contactSectionLink:first-child {
+  margin: 0;
 }
 
-.contactSectionImgA {
-  width: 240px;
-  position: absolute;
-  left: 0;
-  bottom: -20px;
-  overflow: visible;
-}
-.contactSectionImgB {
-  width: 240px;
-  position: absolute;
-  right: 0;
-  bottom: -60px;
-  overflow: visible;
+.contactSectionLink:hover {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
 }
 
-.contactSectionImg div {
-  overflow: visible;
-  box-shadow: 0px 4px 30px rgba(0, 35, 51, 0.5);
-}
-
-.contactSectionTxt {
-  width: calc(100% - 360px);
-  padding: 4vw 0;
-  margin: 0 0 0 60px;
+.contactSectionLink h3 {
   text-align: center;
-  order: 2;
-}
-
-.contactSectionLogo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 40px 0;
-  padding: 0;
-}
-
-.contactSectionLogoImg {
-  width: 200px;
-  height: 50px;
-  position: relative;
-}
-.contactSectionLogoTxt {
   font-size: 1.8rem;
-  color: #fff;
-  margin: 0 20px 0 0;
-  font-weight: bold;
-}
-
-.contactSectionLogoBtn {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
+  margin: 0;
 }
-
-.contactSectionLogoBtn a {
-  margin: 0 5px;
+.contactSectionLink h3 svg {
+  font-size: 1.8rem;
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: var(--info-Main);
 }
-
-@media screen and (max-width: 960px) {
-  .contactSectionImg {
-    width: 25vw;
-    height: 30vw;
-  }
-
-  .contactSectionImgA {
-    width: 20vw;
-  }
-  .contactSectionImgB {
-    width: 20vw;
-  }
-
-  .contactSectionTxt {
-    width: calc(100% - 25vw);
-    padding: 40px 0;
-    margin: 0 0 0 30px;
-    text-align: center;
-  }
+.contactSectionLink p {
+  margin: 20px 0 0;
+  text-align: center;
+  font-size: 1.4rem;
+}
+.contactSectionLink p span {
+  display: block;
 }
 
 @media screen and (max-width: 767px) {
+  .contactSection_inner {
+    padding: 40px 20px;
+  }
+
+  .contactSection h2 {
+    font-size: 2rem;
+  }
+
   .contactSectionFlex {
     display: block;
   }
 
-  .contactSectionImg {
-    width: 45vw;
-    height: 50vw;
-    margin: 0 auto;
-  }
-
-  .contactSectionImgA {
-    width: 35vw;
-  }
-  .contactSectionImgB {
-    width: 35vw;
-  }
-
-  .contactSectionTxt {
+  .contactSectionLink {
     width: 100%;
-    margin: 0;
+    margin: 0 0 20px;
+    box-sizing: border-box;
+    padding: 30px;
   }
-}
-
-@media screen and (max-width: 480px) {
-  .contactSectionLogoBtn {
-    display: block;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  .contactSectionLogoBtn a {
-    margin: 0 0 10px;
-    display: flex;
-  }
-
-  .contactSectionLogo {
-    display: block;
-    margin: 30px 0;
-    padding: 0;
-    text-align: center;
-  }
-  .contactSectionLogoImg {
-    margin: 0 auto;
-  }
-
-  .contactSectionLogoTxt {
-    font-size: 1.6rem;
-    margin: 0 0 5px 0;
+  .contactSectionLink:first-child {
+    margin: 0 0 20px;
   }
 }
 
 /* news */
+
+.boxSection {
+  padding: 4vw;
+}
+.boxSectionInner {
+  background-color: var(--background);
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 .newsListHead {
   background-color: var(--bg-light);
@@ -1063,8 +1473,19 @@ ul.newsCategoryList {
   text-align: center;
 }
 ul.newsCategoryList li {
-  margin: 0 3px 6px;
+  margin: 0 10px 6px;
   display: inline-block;
+}
+
+ul.newsCategoryList li a {
+  font-size: 1.6rem;
+  padding: 3px 5px;
+  border-radius: 2px;
+}
+
+ul.newsCategoryList li a:hover {
+  background-color: var(--info-Light);
+  color: #fff;
 }
 
 ul.newsCategoryList li ul.news {
@@ -1101,7 +1522,7 @@ ul.news li a:hover {
 ul.news li h3 {
   font-size: 1.7rem;
   margin: 0 0 15px 0;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1.4;
 }
 
@@ -1192,7 +1613,11 @@ ul.newsImages li a {
     margin: 0 0 6px 0;
   }
   ul.newsCategoryList li a {
-    display: flex;
+    display: block;
+    border: solid 1px var(--info-Main);
+    font-size: 1.4rem;
+    padding: 5px;
+    text-align: center;
   }
 
   ul.news li a {
@@ -1680,16 +2105,18 @@ ul.pager li a {
   box-sizing: border-box;
   min-width: 28px;
   border-radius: 50%;
-  border: solid 1px var(--primary-500);
-  color: var(--text-color);
+  border: solid 1px var(--info-Main);
+  color: var(--info-Main);
 }
 
 ul.pager li a:hover {
-  background-color: #e6f6fd;
+  background-color: var(--info-Main);
+  color: #fff;
 }
 
 ul.pager li.active a {
-  background-color: #ccecfb;
+  background-color: var(--info-Light);
+  color: #fff;
 }
 
 @media screen and (max-width: 840px) {
@@ -1788,7 +2215,7 @@ ul.breadcrumb li a:hover {
 }
 
 .formContentBox {
-  margin: 0 0 20px;
+  margin: 0 0 40px;
 }
 .formContentBoxFlex {
   display: flex;
@@ -1806,7 +2233,7 @@ ul.breadcrumb li a:hover {
 }
 
 .contactContent label {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   margin: 0 0 5px 0;
   display: flex;
@@ -1830,8 +2257,8 @@ ul.breadcrumb li a:hover {
 }
 
 .errorText {
-  margin: 5px 0 0 0;
-  font-size: 1.2rem;
+  margin: 5px 0 0 0 !important;
+  font-size: 1.2rem !important;
   color: var(--error-500);
 }
 
@@ -1906,6 +2333,8 @@ p.downloadTxt span {
   min-height: 720px;
   position: relative;
   z-index: 1;
+  background-color: var(--secondary-Main);
+  color: #fff;
 }
 
 .thanksPageBg {
@@ -1926,6 +2355,15 @@ p.downloadTxt span {
   background-color: var(--bg-overlay);
   mix-blend-mode: multiply;
   z-index: 1;
+}
+
+.thanksContentImage {
+  max-width: 300px;
+  max-height: 300px;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  margin: 0 auto 4vw;
 }
 
 .thanksContentBg {
@@ -1950,17 +2388,12 @@ p.downloadTxt span {
   font-size: 2.3rem;
   font-weight: bold;
   margin: 0 0 40px 0;
-  color: #fff;
 }
 
 .thanksContent h1 span {
   display: block;
   font-size: 1.6rem;
   margin: 10px 0 0 0;
-}
-
-.thanksContent p {
-  color: #fff;
 }
 
 .thanksContentBtn {
@@ -2042,5 +2475,119 @@ p.downloadTxt span {
   .thanksContent p {
     font-size: 1.4rem;
     text-align: left;
+  }
+}
+
+/* WebInsurance */
+
+.insurance {
+  background-color: var(--secondary-Light);
+}
+.insuranceFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4vw 0 0 0;
+  flex-wrap: wrap;
+  padding: 0 4vw;
+}
+
+.insuranceFlex .contactSectionLink {
+  background-color: #fff;
+  width: auto;
+  margin: 0 0 30px 30px;
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 4px;
+  color: var(--info-Main);
+  text-align: center;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+.insuranceFlex .contactSectionLink:first-child {
+  margin: 0 0 30px 0;
+}
+
+.insuranceFlex .contactSectionLink:hover {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+}
+
+.insuranceFlex .contactSectionLink svg {
+  font-size: 7rem;
+  color: var(--primary-Main);
+}
+
+.insuranceFlex .contactSectionLink h3 {
+  font-size: 1.6rem;
+  margin: 15px 0 0 0;
+}
+
+@media screen and (max-width: 690px) {
+  .insuranceFlex .contactSectionLink:nth-child(odd) {
+    margin: 0 0 30px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .insuranceFlex .contactSectionLink {
+    width: 100%;
+    margin: 0 0 4vw 0;
+  }
+  .insuranceFlex .contactSectionLink:nth-child(odd) {
+    margin: 0 0 4vw 0;
+  }
+}
+
+.whiteBase {
+  background-color: #fff;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4vw;
+}
+
+.whiteBase table {
+  line-height: 1.6;
+}
+.whiteBase table tr {
+  border: none;
+}
+.whiteBase table tr:first-child {
+  border: none;
+}
+.whiteBase table tr:nth-child(even) {
+  background-color: var(--background);
+}
+
+.whiteBase table th {
+  padding: 30px 20px;
+  white-space: nowrap;
+}
+.whiteBase table td {
+  padding: 30px 20px;
+}
+
+.btnCenter {
+  margin: 0 auto;
+  text-align: center;
+  margin: 40px 0 0;
+}
+
+@media screen and (max-width: 480px) {
+  .whiteBase {
+    padding: 40px 0;
+  }
+  .whiteBase table {
+    font-size: 1.4rem;
+  }
+  .whiteBase table th {
+    padding: 30px 15px;
+    white-space: nowrap;
+  }
+  .whiteBase table td {
+    padding: 0 15px 30px;
+  }
+
+  .whiteBase p {
+    text-align: center;
   }
 }

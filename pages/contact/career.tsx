@@ -17,7 +17,7 @@ const Index: NextPage = () => {
   });
 
   const submit = (values) => {
-    fetch('/api/contact', {
+    fetch('/api/career', {
       method: 'POST',
       headers: {
         Accept: 'application/json, text/plain, */*',
@@ -40,9 +40,13 @@ const Index: NextPage = () => {
       <div className={styles.contactPageFlex}>
         <div className={styles.contactPageFlexLeft}>
           <div className={styles.contactPageFlexInner}>
-            <h1 className={styles.headline}>お問い合わせ</h1>
+            <h1 className={styles.headline}>
+              採用情報への
+              <br />
+              お問い合わせ
+            </h1>
             <p>
-              弊社にご関心いただきありがとうございます。
+              弊社に採用情報にご関心いただきありがとうございます。
               必須項目を入力の上、フォームの送信をお願いします。
               担当者が内容を確認の上、折り返し連絡させていただきます。
             </p>

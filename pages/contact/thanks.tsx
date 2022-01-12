@@ -12,17 +12,16 @@ const Thanks: NextPage = () => {
         pageDescription='お問い合わせフォームの送信が完了しました。この度は弊社へのお問い合わせをいただき、誠にありがとうございます。お問い合わせ内容を確認の上、担当者よりご連絡させていただきます。'
       />
       <section className={styles.thanksPage}>
-        <div className={styles.thanksPageBg}>
-          <Image
-            src='/images/contact_section_bg.jpg'
-            alt='お問い合わせありがとうございます。'
-            layout={'fill'}
-            objectFit={'cover'}
-          />
-          <div className={styles.thanksPageBgOverlay}></div>
-        </div>
         <div className={styles.thanksContentBg}>
           <div className={styles.thanksContent}>
+            <div className={styles.thanksContentImage}>
+              <Image
+                src='/images/hero.png'
+                alt='株式会社LTD'
+                layout={'fill'}
+                objectFit={'contain'}
+              />
+            </div>
             <h1>お問い合わせいただきありがとうございます。</h1>
             <p>
               この度は弊社へのお問い合わせをいただき、誠にありがとうございます。
@@ -30,7 +29,7 @@ const Thanks: NextPage = () => {
               お問い合わせ内容を確認の上、担当者よりご連絡させていただきます。
             </p>
             <div className={styles.thanksContentBtn}>
-              <Button bgColor='primary' size='normal' types='link' href={'/'}>
+              <Button bgColor='primary' size='normal' types='link' href='/'>
                 ホームへ戻る
               </Button>
             </div>

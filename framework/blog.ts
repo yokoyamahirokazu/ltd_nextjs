@@ -6,7 +6,7 @@ const limit = parseInt(config.defaultLimit);
 
 export const getContents = async (
   currentPage: number = 1,
-  articleFilter?: string,
+  articleFilter?: string
 ): Promise<{
   blogs: IBlog[];
   categories: ICategory[];
@@ -18,6 +18,7 @@ export const getContents = async (
     getCategories(),
     getTags(),
   ]);
+
   return {
     blogs: blogs.contents,
     categories: categories.contents,
@@ -31,10 +32,13 @@ export const getAllBlogs = async (): Promise<MicroCmsResponse<IBlog>> => {
     endpoint: 'blog',
     queries: { limit: config.defaultMaxLimit },
   });
+
   return res;
 };
 
-export const getBlogs = async (limit: number): Promise<MicroCmsResponse<IBlog>> => {
+export const getBlogs = async (
+  limit: number
+): Promise<MicroCmsResponse<IBlog>> => {
   const res = await client.get<MicroCmsResponse<IBlog>>({
     endpoint: 'blog',
     queries: { limit: limit },
@@ -43,7 +47,9 @@ export const getBlogs = async (limit: number): Promise<MicroCmsResponse<IBlog>> 
   return res;
 };
 
-export const getLatestBlogs = async (limit: number): Promise<MicroCmsResponse<IBlog>> => {
+export const getLatestBlogs = async (
+  limit: number
+): Promise<MicroCmsResponse<IBlog>> => {
   const res = await client.get<MicroCmsResponse<IBlog>>({
     endpoint: 'blog',
     queries: { limit: limit },
@@ -55,7 +61,7 @@ export const getLatestBlogs = async (limit: number): Promise<MicroCmsResponse<IB
 export const getBlogsByFilter = async (
   limit: number,
   currentPage: number,
-  articleFilter?: string,
+  articleFilter?: string
 ): Promise<{ blogs: MicroCmsResponse<IBlog>; pager: number[] }> => {
   const queries: Queries = {
     limit: limit,
@@ -67,6 +73,7 @@ export const getBlogsByFilter = async (
     queries: queries,
   });
   const pager = [...Array(Math.ceil(blogs.totalCount / 12)).keys()];
+
   return { blogs, pager };
 };
 
@@ -76,11 +83,15 @@ export const getBlogById = async (blogId: string): Promise<IBlog> => {
     contentId: blogId,
     queries: { depth: 2 },
   });
+
   return res;
 };
 
 export const getCategories = async (): Promise<MicroCmsResponse<ICategory>> => {
-  const res = await client.get<MicroCmsResponse<ICategory>>({ endpoint: 'categories' });
+  const res = await client.get<MicroCmsResponse<ICategory>>({
+    endpoint: 'categories',
+  });
+
   return res;
 };
 
@@ -89,5 +100,6 @@ export const getTags = async (): Promise<MicroCmsResponse<ITag>> => {
     endpoint: 'tags',
     queries: { limit: 1000 },
   });
+
   return res;
 };

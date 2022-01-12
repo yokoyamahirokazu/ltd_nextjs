@@ -19,7 +19,7 @@ const SeoContent = ({
   const defaultTitle = 'LTD';
   const defaultDescription = 'LTDのページです。';
   const defaultPageUrl = config.baseUrl;
-  const defaultOgpImg = `${config.baseUrl}/images/og_image.jpg`;
+  const defaultOgpImg = `${config.baseUrl}/images/og_image.png`;
 
   const title = pageTitle ? `${pageTitle} | LTD` : defaultTitle;
   const description = pageDescription ? pageDescription : defaultDescription;

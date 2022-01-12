@@ -1,3 +1,4 @@
+export * from './About';
 export * from './BreadCrumb';
 export * from './Categories';
 export * from './Footer';
@@ -9,9 +10,9 @@ export * from './Post';
 export * from './Share';
 export * from './Toc';
 export * from './Hero';
-export * from './Case';
+export * from './WebInsurance';
 export * from './Recommend';
-export * from './Faqs';
+export * from './Faq';
 export * from './Loader';
 export * from './Handbook';
 export * from './Service';

@@ -24,8 +24,8 @@ const Page: NextPage<PageProps> = (props) => {
   if (router.isFallback) {
     return <Loader />;
   }
-  
-return (
+
+  return (
     <>
       <SeoContent
         pageTitle={props.selectedCategory.name}
@@ -48,76 +48,48 @@ return (
           </div>
         )}
 
-        {(() => {
-          if (props.selectedCategory.id == 'corporate') {
+        <ul className={`${styles.news} ${styles.newsImages}`}>
+          {props.blogs.map((blog) => {
             return (
-              <ul className={styles.news}>
-                {props.blogs.map((blog) => {
-                  return (
-                    <li key={blog.id}>
-                      <Link href="/news/[blogId]" as={`/news/${blog.id}`}>
-                        <a>
-                          <h3>{blog.title}</h3>
-                          <Meta
-                            createdAt={blog.createdAt}
-                            category={blog.category}
-                            tags={blog.tag}
-                          />
-                        </a>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            );
-          } else {
-            return (
-              <ul className={`${styles.news} ${styles.newsImages}`}>
-                {props.blogs.map((blog) => {
-                  return (
-                    <li key={blog.id}>
-                      <Link href="/news/[blogId]" as={`/news/${blog.id}`}>
-                        <a>
-                          {blog.ogimage ? (
-                            <div className={styles.newsImagesBox}>
-                              <Image
-                                src={`${blog.ogimage.url}?w=670`}
-                                alt={blog.title}
-                                layout={'fill'}
-                                objectFit={'cover'}
-                              />
-                            </div>
-                          ) : (
-                            <div className={styles.newsImagesBox}>
-                              <Image
-                                src="/images/noimage.png"
-                                alt={blog.title}
-                                layout={'fill'}
-                                objectFit={'cover'}
-                              />
-                            </div>
-                          )}
+              <li key={blog.id}>
+                <Link href='/news/[blogId]' as={`/news/${blog.id}`}>
+                  <a>
+                    {blog.ogimage ? (
+                      <div className={styles.newsImagesBox}>
+                        <Image
+                          src={`${blog.ogimage.url}?w=670`}
+                          alt={blog.title}
+                          layout={'fill'}
+                          objectFit={'cover'}
+                        />
+                      </div>
+                    ) : (
+                      <div className={styles.newsImagesBox}>
+                        <Image
+                          src='/images/noimage.png'
+                          alt={blog.title}
+                          layout={'fill'}
+                          objectFit={'cover'}
+                        />
+                      </div>
+                    )}
 
-                          <div className={styles.newsImagesTxt}>
-                            <h3>{blog.title}</h3>
-                            <Meta
-                              createdAt={blog.postDate}
-                              category={blog.category}
-                              tags={blog.tag}
-                            />
-                          </div>
-                        </a>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
+                    <div className={styles.newsImagesTxt}>
+                      <h3>{blog.title}</h3>
+                      <Meta
+                        createdAt={blog.postDate}
+                        category={blog.category}
+                        tags={blog.tag}
+                      />
+                    </div>
+                  </a>
+                </Link>
+              </li>
             );
-          }
-        })()}
-
+          })}
+        </ul>
         {props.blogs.length > 0 && (
-          <ul className="pager">
+          <ul className='pager'>
             <Pager
               pager={props.pager}
               currentPage={props.currentPage}
@@ -144,10 +116,13 @@ export async function getStaticPaths() {
 export async function getStaticProps(context: GetStaticPropsContext) {
   const page: any = context.params?.id || '1';
   const categoryId = context.params?.categoryId;
-  const articleFilter = categoryId !== undefined ? `category[equals]${categoryId}` : undefined;
+  const articleFilter =
+    categoryId !== undefined ? `category[equals]${categoryId}` : undefined;
   const { blogs, pager, categories } = await getContents(page, articleFilter);
   const selectedCategory =
-    categoryId !== undefined ? categories.find((content) => content.id === categoryId) : undefined;
+    categoryId !== undefined
+      ? categories.find((content) => content.id === categoryId)
+      : undefined;
 
   return {
     props: {
