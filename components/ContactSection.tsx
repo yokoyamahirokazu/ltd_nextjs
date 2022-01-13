@@ -1,6 +1,7 @@
 import styles from '@styles/components/Components.module.css';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { FiCheckSquare, FiMail } from 'react-icons/fi';
+import { BsLine } from 'react-icons/bs';
 import Link from 'next/link';
 
 interface Props {
@@ -52,6 +53,22 @@ const ContactSection: React.FC<Props> = ({}: Props) => {
                 各種お問い合わせは <br />
                 専用フォームをご利用ください
               </p>
+            </a>
+          </Link>
+        </div>
+      </div>
+      <div className={styles.lineLink}>
+        <div className={styles.lineLinkInner}>
+          <div className={styles.headline_box_center}>
+            <h2 className={styles.headline}>
+              LTD公式LINEアカウント
+              <span>いつでもLINEでお気軽にご相談いただけます！</span>
+            </h2>
+          </div>
+          <Link href='https://lin.ee/Kw1JuTW'>
+            <a className={styles.lineBtn} target='_blank'>
+              <BsLine />
+              友達になる
             </a>
           </Link>
         </div>

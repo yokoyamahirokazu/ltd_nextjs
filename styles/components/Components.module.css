@@ -2591,3 +2591,40 @@ p.downloadTxt span {
     text-align: center;
   }
 }
+
+.lineLink {
+  margin: 40px auto 0;
+  max-width: 1080px;
+}
+.lineLinkInner {
+  padding: 40px;
+  border: solid 1px #00b900;
+  text-align: center;
+}
+
+.lineBtn {
+  background-color: #00b900;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 4px;
+  margin: 0 0 0 0;
+}
+
+.lineBtn svg {
+  margin: 0 5px 0 0;
+}
+
+.lineBtn:hover {
+  background-color: var(--info-Light);
+}
+
+@media screen and (max-width: 640px) {
+  .lineLink {
+    margin: 20px auto 0;
+    max-width: 1080px;
+  }
+}
