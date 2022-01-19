@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>hogehoge</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-13T09:24:38.631Z</lastmod></url>
-<url><loc>hogehoge/career</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-13T09:24:38.631Z</lastmod></url>
-<url><loc>hogehoge/company/about</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-13T09:24:38.631Z</lastmod></url>
-<url><loc>hogehoge/company/privacy-policy</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-13T09:24:38.631Z</lastmod></url>
-<url><loc>hogehoge/contact</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-13T09:24:38.631Z</lastmod></url>
-<url><loc>hogehoge/contact/career</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-13T09:24:38.631Z</lastmod></url>
-<url><loc>hogehoge/contact/thanks</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-13T09:24:38.631Z</lastmod></url>
-<url><loc>hogehoge/feed</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-13T09:24:38.631Z</lastmod></url>
-<url><loc>hogehoge/news/draft</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-13T09:24:38.631Z</lastmod></url>
-<url><loc>hogehoge/service/corporation</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-13T09:24:38.631Z</lastmod></url>
-<url><loc>hogehoge/service/faq</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-13T09:24:38.632Z</lastmod></url>
-<url><loc>hogehoge/service/individual</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-13T09:24:38.632Z</lastmod></url>
-<url><loc>hogehoge/service/inheritance</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-13T09:24:38.632Z</lastmod></url>
-<url><loc>hogehoge/news/page/1</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-13T09:24:38.632Z</lastmod></url>
-<url><loc>hogehoge/news/tmccrqa3poxj</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-13T09:24:38.632Z</lastmod></url>
+<url><loc>hogehoge</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-19T03:00:57.439Z</lastmod></url>
+<url><loc>hogehoge/career</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-19T03:00:57.439Z</lastmod></url>
+<url><loc>hogehoge/company/about</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-19T03:00:57.439Z</lastmod></url>
+<url><loc>hogehoge/company/privacy-policy</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-19T03:00:57.439Z</lastmod></url>
+<url><loc>hogehoge/contact</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-19T03:00:57.439Z</lastmod></url>
+<url><loc>hogehoge/contact/career</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-19T03:00:57.439Z</lastmod></url>
+<url><loc>hogehoge/contact/thanks</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-19T03:00:57.439Z</lastmod></url>
+<url><loc>hogehoge/feed</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-19T03:00:57.439Z</lastmod></url>
+<url><loc>hogehoge/news/draft</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-19T03:00:57.439Z</lastmod></url>
+<url><loc>hogehoge/service/corporation</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-19T03:00:57.439Z</lastmod></url>
+<url><loc>hogehoge/service/faq</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-19T03:00:57.439Z</lastmod></url>
+<url><loc>hogehoge/service/individual</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-19T03:00:57.439Z</lastmod></url>
+<url><loc>hogehoge/service/inheritance</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-19T03:00:57.439Z</lastmod></url>
+<url><loc>hogehoge/news/page/1</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-19T03:00:57.439Z</lastmod></url>
+<url><loc>hogehoge/news/6nce1fgul</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-19T03:00:57.439Z</lastmod></url>
+<url><loc>hogehoge/news/tmccrqa3poxj</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-01-19T03:00:57.439Z</lastmod></url>
 </urlset>
