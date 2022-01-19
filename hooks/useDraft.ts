@@ -22,6 +22,7 @@ export const useDraft = () => {
     if (router.isReady) {
       fetcher();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.isReady]);
 
   return {
