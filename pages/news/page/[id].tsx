@@ -63,7 +63,7 @@ const Page: NextPage<PageProps> = (props) => {
                       ) : (
                         <div className={styles.newsImagesBox}>
                           <Image
-                            src='/images/noimage.png'
+                            src='/images/og_image.png'
                             alt={blog.title}
                             layout={'fill'}
                             objectFit={'cover'}
