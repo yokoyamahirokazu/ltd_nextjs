@@ -14,6 +14,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           src='https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js'
           async
         ></script>
+        <meta
+          name='google-site-verification'
+          content='-lPB_Nc2hPAPQSToyTKAa8ao8RO1GTKUX8RHqhzVmxE'
+        />
       </Head>
       <div className='wrapper'>
         <Header />
